@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+<style>
+
+             /* navbar */
+
+    *{
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        .container{
+            position: relative;
+        }
+        .image{
+            width: 100%;
+            height: 100vh;
+        }
+        
+       
+        .navbar{
+            height: 10vh;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(29, 29, 47);
+            
+           
+        }
+        .navbar p{
+            line-height: 10vh;
+            margin-left: 20px;
+            margin-right: 5vw;
+            color: antiquewhite;
+
+        }
+        .contact{
+            position: absolute;
+            margin-left: 10px;
+            
+        }
+
+        .navbar ul{
+            display: flex;
+            
+        }
+        .navbar ul li{
+            list-style: none;
+            
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            line-height: 10vh;
+            padding: 10px;
+            margin-right: 20px;
+            
+            
+        }
+        #checkbox{
+            display: none;
+        }
+        #checkbtn{
+            display: none;
+            line-height: 10vh;
+            margin-left: 10px; 
+            color: antiquewhite; 
+            
+        }
+        #checkbox:checked ~ ul{
+            left: 0px;
+        }
+        @media screen and (max-width:900px) {
+            .navbar ul li{
+                display: none;
+            }
+            
+            #checkbtn{
+                display: block;
+            }
+            
+            .navbar ul {
+                height: 100vh;
+                width: 40%;
+                position: fixed;
+                background-color: rgb(29, 29, 47);
+                /* left: 100px; */
+                left: -100%;
+                transition: .5s;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start
+            }
+            .navbar ul li{
+            display: block;
+            text-align: center;
+        
+        
+            }
+            
+        }
+        .icons{
+            line-height: 10vh;
+            padding: 10px;
+            
+        }
+        .book{
+            line-height: 10vh;
+            color: antiquewhite;
+        }
+        .logo{
+            line-height: 10vh;            
+            font-family: 'Times New Roman', Times, serif;
+            
+            
+        }
+        hr{
+            height: 1px;
+            width: 100%;
+            background-color: antiquewhite;
+            
+        }
+        .links{
+            color: antiquewhite;
+        }
+        .content{
+            position: absolute;
+            top: 10vh;
+            height: 10vh;
+            width: 100%;
+            
+        }
+        .content:hover{
+            background-color: rgb(29, 29, 47);
+        }
+        .navbar:hover{
+            background-color: rgb(29, 29, 47);
+        }
+        .elink{
+            color: antiquewhite;
+            text-decoration: none;
+            padding: 10px;
+            line-height: 10vh;
+        }
+        .content ul{
+            display: flex;
+            justify-content: space-between;
+            
+            
+        }
+        .content ul li{
+            list-style: none;
+            
+        }
+        #checkbox2{
+            display: none;
+           
+        }
+        #checkbtn2{
+            display: none;
+            line-height: 10vh;
+            text-align: center; 
+            color: antiquewhite; 
+            
+        }
+        #checkbox2:checked ~ ul{
+            top: 10vh;
+        }
+         @media screen and (max-width:900px) {
+            
+            .content ul li{
+                display: none;
+            }
+            #checkbtn2{
+                display: block;
+            }
+            .content ul {
+                height: 90vh;
+                width: 100%;
+                position: fixed;
+                background-color: rgb(29, 29, 47);
+                top: 10vh;
+                top: -100%;
+                transition: .5s;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            .content ul li{
+                display: block;
+                text-align: center;
+                font-size: medium;
+        
+        
+            }
+            .elink{
+                font-size: small;
+                
+            }
+        }
+
+                /* content */
+
+                .heading1{
+            padding: 5vh;
+            text-align: center;
+            margin-top: 5vh;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: lighter;
+            font-size: 1.5rem;
+            color: rgb(29, 29, 47);
+        }
+        .h1{
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 1px;
+            background-color: rgb(29, 29, 47);
+            
+        }
+        .para{
+            width: 50%;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .para1{
+            text-align: center;
+            margin-top: 10vh;
+            font-size: 1rem;
+            
+        }
+        .book1{
+            font-size: large;
+            text-align: center;
+            background-color: rgb(29, 29, 47);
+            margin-top: 5vh;
+        }
+        .booklink{
+            
+            padding: 4px;
+            text-decoration: none;
+            color: antiquewhite;
+            font-size: 1rem;
+        }
+       .i{
+        width: 32vw;
+        height: 30vw;
+        padding: 2px;
+        border-radius: 12px;
+       }
+       .imgs{
+        margin-top: 5vh;
+        display: flex;
+        justify-content: space-between;
+       }
+       .h2{
+        width: 90vw;
+        height: 2px;
+        background-color: rgb(29, 29, 47);
+        margin-left: auto;
+        margin-right: auto;
+       }
+       .more{
+        height: 3vh;
+        line-height: 3vh;
+        margin-top: 2vh;
+       text-align: center;
+       width: 50%;
+       margin-left: auto;
+       margin-right: auto;
+       background-color: rgb(29, 29, 47);
+        
+       
+       }
+       .moreinfo{
+        font-size: 1rem;
+        text-decoration: none;
+        color: antiquewhite;
+
+       }
+       .rooms{
+        background-color: rgb(246, 238, 238);
+       }
+       .experience{
+        
+       }
+       .experiencepara{
+        display: flex;
+        justify-content: center;
+       }
+       .culinary{
+        margin-top: 5vh;
+        padding: 10px;
+       }
+       .culinaryimg{
+        height: 50vh;
+        width: 40vw;
+        border-radius: 12px;
+       }
+       .intro{
+        height: 35vh;
+        width:40vw;
+       
+        
+       }
+       .h3{
+        color: rgb(29, 29, 47);
+        font-size: 1rem;
+        padding: 4px;
+        font-weight: bold;
+       }
+       .p4{
+        
+        font-size: 1rem;
+        padding: 4px;
+       }
+       .explore1{
+        width: 30%;
+        background-color:rgb(29, 29, 47);
+        color: antiquewhite;
+        text-align: center;
+       
+       }
+       @media screen and (max-width:900px) {
+        .experiencepara{
+            display: block;           
+            
+        }
+        .culinary{
+            text-align: center;
+            margin-top: 0px;
+        }
+        .culinaryimg{
+            height: 50vh;
+            width: 80%;
+            text-align: center;
+        }
+        .intro{
+            width: 100%;
+            height: 20vh;
+            text-align: center;
+            
+        }
+        .p4{
+            font-size: .8rem;
+        }
+        .explore1 p{
+            font-size: .8rem;
+        }
+        .para1{
+            margin-bottom: 5vh;
+        }
+       }
+       @media screen and (max-width:900px) {
+        .imgs{
+            display: block;
+            /* justify-content: center;
+            align-items: center; */
+            text-align: center;
+            
+        }
+        .i{
+            width: 80%;
+            height: 50vh;
+            margin: auto;
+            
+            
+        }
+       }
+       .review{
+        display: flex;
+        justify-content: center;
+        margin-top: 5vh;
+        
+       }
+       .reviewpara{
+        width: 30%;
+        height: 50vh;
+        margin: 2vh;
+       }
+       
+       .reviewimg{
+        width: 40%;
+        height: 50vh;
+        margin: 2vh;
+        border-radius: 12px;
+       }
+       .h4{
+        text-align: center;
+        font-size: 1.5rem;
+       }
+       .p5{
+        margin-top: 5vh;
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: 5vh;
+       }
+       .line1{
+        width: 100%;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        background-color: rgb(29, 29, 47);
+        
+       }
+       .line2{
+        width: 30%;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        background-color: rgb(29, 29, 47);
+        margin-right: auto;
+        margin-left: auto;
+       }
+       @media screen and (max-width:900px) {
+
+        .review{
+            display: block; 
+           text-align: center;
+        }
+        .reviewpara{
+           
+        width: 80%;
+        height: 50vh;
+        margin: 0px;
+        
+        margin-right: auto;
+        margin-left: auto;
+       
+       }
+       .reviewimg{
+        width: 80%;
+        height: 50vh;
+        margin: 0px;
+        border-radius: 12px;
+        
+       }
+       }
+       .experiencepara1{
+        display: flex;
+        justify-content: center;
+       }
+       .culinary1{
+        margin-top: 5vh;
+        padding: 10px;
+       }
+       .culinaryimg1{
+        height: 50vh;
+        width: 30vw;
+        border-radius: 12px;
+       }
+       .intro1{
+        height: 35vh;
+        width:30vw;
+       
+        
+       }
+       @media screen and (max-width:900px) {
+        .experiencepara1{
+            display: block;
+            text-align: center;
+            margin-top: 0px;
+
+        }
+        .culinaryimg1{
+        height: 50vh;
+        width: 80vw;
+        border-radius: 12px;
+       }
+       .intro1{
+        height: 20vh;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+       }
+       }
+       .imgs{
+        height: 70vh;
+        width: 100%;
+        background-image: url(images/img23.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 100% 100%;
+        color: antiquewhite;
+       }
+       .en{
+       padding-top: 10vh;
+        height: 20vh;
+        width: 30%;
+        font-size: 1rem;
+        padding-left: 10px;
+       }
+</style>
+
+
+
+
+</head>
+<body>
+    <div class="container">
+        <img src="images/img25.jpg" class="image" alt="">        
+
+        <div class="navbar">                
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" id="checkbtn"><i class="fa-solid fa-bars"></i></label>
+            <p>ATLANTIS THE ROYAL</p>                                             
+            <ul>                
+                <label for="checkbox" id="checkbtn"><i class="fa-solid fa-xmark"></i></label>
+                <li><a href="index.html" class="links"><i class="fa-solid fa-house"></i>HOME</a></li>
+                <li><a href="#" class="links">ABOUT</a></li>
+                <li><a href="#" class="links">SERVICES</a></li>
+                <li><a href="#" class="book">BOOK NOW</a></li>                
+            </ul>
+            
+        </div>
+        
+        <div class="content">
+            <hr>
+            <input type="checkbox" id="checkbox2">
+            <label for="checkbox2" id="checkbtn2">LEARN MORE<i class="fa-solid fa-caret-down"></i></i></i></label>
+            <ul>                
+                <label for="checkbox2" id="checkbtn2"><i class="fa-solid fa-xmark"></i></i></i></label>
+                <li><a href="#" class="elink"> STAYS <i class="fa-solid fa-hotel"></i>  </a></li>
+                <li><a href="#" class="elink">ENTERTAINMENT <i class="fa-solid fa-champagne-glasses"></i></a></li>
+                <li><a href="#" class="elink">DINING <i class="fa-solid fa-burger"></i></i></a></li>
+                <li><a href="#" class="elink">ADVENTURE <i class="fa-solid fa-mountain"></i> </a></li>
+                <li><a href="#" class="elink">EVENTS <i class="fa-solid fa-calendar-days"></i> </a></li>
+                <li><a href="#" class="elink">OFFERS <i class="fa-solid fa-tag"></i></a></li> 
+                
+                              
+            </ul>
+        </div>
+
+   
+    </div>
+
+    <div class="experience">
+        <p class="heading1">The World’s Leading Dining Destination </p>
+        <hr class="h1">
+
+        <div class="para">
+            <p class="para1">
+                Prepare all five senses for an
+                 experience that will raise the expectations of what a culinary destination should be. <br>
+                 The world’s most renowned chefs and the region’s most
+            </p>
+        </div>
+        <div class="experiencepara">
+                    <div class="culinary">
+
+                            <img src="images/img14.jpg" class="culinaryimg" alt="">
+                            <div class="intro">
+                                    <P class="h3">Atlantis, The Palm</P>
+                                    <P class="p4">
+                                        This Dubai icon is the ultimate foodie destination with many 
+                                        ptions ranging from celebrity chef restaurant Nobu, Gordon Ramsay’s
+                                         Bread Street Kitchen and Dubai’s all-time favourite hangout Wavehouse.
+                                    </P>
+                                    <div class="more">
+                                        <a href="#" class="moreinfo">view more</a>
+                                    </div>
+                            </div>
+                        
+                    </div>
+                    <div class="culinary">
+
+                            <img src="images/img15.jpg" class="culinaryimg" alt="">
+                            <div class="intro">
+                                    <P class="h3">Atlantis The Royal</P>
+                                    <P class="p4" >
+                                        A daring destination resort with more than 8
+                                         celebrity chefs restaurants and entertainment where you’ll be left with a feeling of wonderment.
+                                          The most anticipated hotel is now open.
+                                    </P>
+                                    <div class="more">
+                                        <a href="#" class="moreinfo">view more</a>
+                                    </div>
+                            </div>
+                        
+                    </div>
+                    
+        </div>
+
+
+    </div>
+    <div class="review">
+        <img src="images/img16.jpg" class="reviewimg" alt="">
+        <div class="reviewpara">
+            <hr class="line1">
+            <P class="h4">En Fuego</P>  
+            <hr class="line2">
+            <P class="p5" >
+                It’s time to fiesta at the liveliest restaurant in town!<br>
+
+                Say “hola” to the most energetic and newest restaurant in Dubai and immerse yourself in the rich tapestry of Latin American culture through mouth-watering food, drinks and unrivalled entertainment.
+                <br>
+                Located in Atlantis, The Palm
+                <div class="more">
+                    <a href="#" class="moreinfo">view more</a>
+                </div>
+            </P>
+            <hr class="line1">
+        </div>
+    </div>
+
+
+    <div class="experience">
+        <p class="heading1">Michelin Awarded Restaurants </p>
+        <hr class="h1">
+
+
+        <div class="experiencepara1">
+                    <div class="culinary1">
+
+                            <img src="images/img17.jpg" class="culinaryimg1" alt="">
+                            <div class="intro1">
+                                    <P class="h3">Dinner by Heston Blumenthal Dubai</P>
+                                    <P class="p4">
+                                        One MICHELIN star Dinner by Heston Blumenthal restaurant offers diners a cutting-edge take on historic British cuisine
+                                         dating back to the 1300s. A rare gem for seasoned gastronomes and connoisseurs,
+                                         this unique and stunning restaurant takes you on a delightful promenade through the kitchens of 
+                                         medieval Britain through contemporary eyes.
+                                    </P>
+
+                                    <div class="more">
+                                        <a href="#" class="moreinfo">view more</a>
+                                    </div>
+                            </div>
+                        
+                    </div>
+                    <div class="culinary1">
+
+                            <img src="images/img18.jpg" class="culinaryimg1" alt="">
+                            <div class="intro1">
+                                    <P class="h3">Ossiano</P>
+                                    <P class="p4" >
+                                        Awarded a one MICHELIN star, Ossiano Dubai is a progressive fine dining experience inspired by the ocean and seas. 
+                                        Imagine dining in one of Dubai’s most immersive restaurants, as stingrays, sharks
+                                         and fish in the aquarium glide right past your table.
+                                    </P>
+                                    <div class="more">
+                                        <a href="#" class="moreinfo">view more</a>
+                                    </div>
+                            </div>
+                        
+                    </div>
+                    <div class="culinary1">
+
+                        <img src="images/img19.jpg" class="culinaryimg1" alt="">
+                        <div class="intro1">
+                                <P class="h3">Estiatorio Milos Dubai</P>
+                                <P class="p4" >
+                                    Recognised as one of the finest Mediterranean seafood restaurants in the world, Estiatorio Milos by acclaimed Chef
+                                     Costas Spiliadis introduces gourmands to high-end Hellenic food, wine and hospitality that is infused with a philosophy of simplicity.
+                                </P>
+                                <div class="more">
+                                    <a href="#" class="moreinfo">view more</a>
+                                </div>
+                        </div>
+                    
+                </div>
+                    
+        </div>
+
+    <div class="review">
+        <img src="images/img20.jpg" class="reviewimg" alt="">
+        <div class="reviewpara">
+            <hr class="line1">
+            <P class="h4">Brunch At Atlantis Dubai</P>  
+            <hr class="line2">
+            <P class="p5" >
+                Kick up your heels at Dubai’s biggest party brunch, indulge in world-class Mediterranean or
+                 Japanese cuisine, or enjoy a day out with the children at a relaxed family brunch, Atlantis Dubai puts the fun in Saturday and Sunday brunch.
+                Located in Atlantis, The Palm
+                <div class="more">
+                    <a href="#" class="moreinfo">view more</a>
+                </div>
+            </P>
+            <hr class="line1">
+        </div>
+       
+    </div>
+
+
+    <div class="experience">
+        <p class="heading1">Signature Restaurants </p>
+        <hr class="h1">
+
+
+        <div class="experiencepara1">
+                    <div class="culinary1">
+
+                            <img src="images/img7.jpg" class="culinaryimg1" alt="">
+                            <div class="intro1">
+                                    <P class="h3">	Osteria Francescana</P>
+                                    <P class="p4">
+                                        With a traditional vibe and warm Latin welcome, En Fuego is 
+                                        the newest addition to Dubai’s most energetic dining scene. Escape from every day and be
+                                         transported to the vibrancy of Latin America. 
+                                         
+                                         
+                                    </P>
+                                    </p>
+
+                                    <div class="more">
+                                        <a href="#" class="moreinfo">view more</a>
+                                    </div>
+                            </div>
+                        
+                    </div>
+                    <div class="culinary1">
+
+                            <img src="images/img8.jpg" class="culinaryimg1" alt="">
+                            <div class="intro1">
+                                    <P class="h3">EN FUEGO</P>
+                                    <P class="p4" >
+                                        With a traditional vibe and warm Latin welcome, En Fuego is the newest addition to Dubai’s most 
+                                        energetic dining scene. Escape from every day and be transported to the vibrancy of Latin America. 
+                                       
+                                    </P>
+                                    <div class="more">
+                                        <a href="#" class="moreinfo">view more</a>
+                                    </div>
+                            </div>
+                        
+                    </div>
+                    <div class="culinary1">
+
+                        <img src="images/img21.jpg" class="culinaryimg1" alt="">
+                        <div class="intro1">
+                                <P class="h3">SAFFRON</P>
+                                <P class="p4" >
+                                    With more than 220 dishes and 20 live cooking stations, you're spoiled for choice at Saffron, Dubai’s largest buffet.
+                                     Live it up at Saffron's party brunch on Saturday, 
+                                   
+                                </P>
+                                <div class="more">
+                                    <a href="#" class="moreinfo">view more</a>
+                                </div>
+                        </div>
+                    
+                </div>
+                    
+        </div>
+
+
+     
+
+
+
+
+
+</body>
+</html>
